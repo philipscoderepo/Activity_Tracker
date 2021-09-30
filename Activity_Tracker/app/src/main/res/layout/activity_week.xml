@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#59ABED"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/activitiesScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/sundayButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loadActivities"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Sunday"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:backgroundTint="#424040" />
+
+            <Button
+                android:id="@+id/mondayButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loadActivities"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Monday"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:backgroundTint="#424040" />
+
+            <Button
+                android:id="@+id/tuesdayButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loadActivities"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Tuesday"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:backgroundTint="#424040" />
+
+            <Button
+                android:id="@+id/wednesdayButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loadActivities"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Wednesday"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:backgroundTint="#424040" />
+
+            <Button
+                android:id="@+id/thursdayButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loadActivities"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Thursday"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:backgroundTint="#424040" />
+
+            <Button
+                android:id="@+id/fridayButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loadActivities"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Friday"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:backgroundTint="#424040" />
+
+            <Button
+                android:id="@+id/saturdayButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="loadActivities"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Saturday"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:backgroundTint="#424040" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/statsButton"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:onClick="switchToMainActivity"
+            android:text="Today"
+            app:backgroundTint="#424040" />
+
+        <Button
+            android:id="@+id/dailyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:onClick="switchToDailyActivity"
+            android:text="This Week"
+            app:backgroundTint="#424040" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#424040"
+        android:gravity="center"
+        android:text="Week"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Previous"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="#424040"
+        app:layout_constraintEnd_toStartOf="@+id/nextButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dayTextView" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="#424040"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cancelButton"
+        app:layout_constraintTop_toBottomOf="@+id/dayTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

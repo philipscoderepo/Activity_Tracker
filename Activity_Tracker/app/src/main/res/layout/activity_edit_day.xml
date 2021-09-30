@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#59ABED"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/dayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#424040"
+        android:gravity="center"
+        android:text="Day of the week"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:onClick="backButton"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Back"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:backgroundTint="#424040" />
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:enabled="false"
+            android:onClick="editButtonChangeView"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Edit"
+            android:textSize="18sp"
+            app:backgroundTint="#424040" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="412dp"
+        android:layout_height="613dp"
+        android:background="#747DAF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/activitiesWorkoutLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/newActivityButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:onClick="addNewActivity"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Select An Activity To Edit"
+                android:textSize="18sp"
+                app:backgroundTint="#424040" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
